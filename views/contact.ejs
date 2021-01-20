@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <%- include ('partials/nav.ejs') -%>
+        <h1>Contact Us at 1800...</h1>
+        <h1>Welcome <%= usermail %></h1>
+        <p>Click Here!</p>
+        <form id="contact-form" method="POST" action="/contact">
+            <label for="who">Whom do you want to contact ?</label>
+            <input type="text" name="who" value="<%= qs.person %>">
+            <label for="department">In Which dept ?</label>
+            <input type="text" name="department" value="<%= qs.dept %>">
+            <button>Submit</button>
+        </form>
+
+
+</body>
+
+</html>
